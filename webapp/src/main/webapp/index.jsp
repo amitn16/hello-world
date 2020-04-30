@@ -1,4 +1,4 @@
 <h1> Hello, Welcome to DevOps !!! </h1>
 It should work
 Finally1
-It is updated on 30th April
+It is updated on 30th April 2:30PM CET
