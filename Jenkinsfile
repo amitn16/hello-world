@@ -5,7 +5,7 @@ pipeline {
 	}
 }
 
-	docker.withServer('tcp://192.168.1.109:2375','amit')
+	docker.withServer('tcp://192.168.1.109:2375','amitn16')
 
 	docker.withServer("unix:///var/run/docker.sock"){
 		myImage = docker.image("amitn16/deployansible")
