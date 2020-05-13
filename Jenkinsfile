@@ -1,6 +1,8 @@
 pipeline {
-	withDockerServer([uri: 'tcp://192.168.1.109:2375']) {
-			image = docker.image('amitn16/deployansible').pull()
+	agent {
+		withDockerServer([uri: 'tcp://192.168.1.109:2375']) {
+				image = docker.image('amitn16/deployansible').pull()
+		}
 	}
 }
 
@@ -13,7 +15,18 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'echo test' 
+                eacho 'Test1' 
             }
         }
+    stage('Test') {
+            steps {
+                echo 'test2'
+            }
+        }
+    stage('Deliver') { 
+            steps {
+                sh 'Test 3' 
+            }    
+        }
     }
+}
